@@ -4,7 +4,7 @@ import {BiAddToQueue} from "react-icons/bi"
 
 const topBar = () => {
   return (
-    <div className='w-full px-6 py-4 flex items-center '>
+    <div className='w-full px-6 pt-8 pb-6 flex items-center '>
         <div className="title font-bold w-full text-2xl md:text-4xl lg:text-5xl">
             Albums
         </div>

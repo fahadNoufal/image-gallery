@@ -18,9 +18,9 @@ const cards = ({title,imageUrl,views,likes,downloads,tags}) => {
     }
 
     return (
-    <div className='w-auto mx-6 mt-8' >
+    <div className='w-auto mx-6 mt-8 card-item translate-y-[100svh] ' >
         <div style={{backgroundImage:`url(${imageUrl})`}} 
-        className=' bg-cover bg-center rounded-lg h-36 flex flex-col justify-between'>
+        className=' bg-cover bg-center bg-slate-200 rounded-lg h-36 flex flex-col justify-between'>
             
             <div className='p-4 flex justify-between items-start'>
                 <div>

@@ -3,6 +3,7 @@ import Cards from "./components/cards";
 import SearchBar from "./components/searchBar";
 import ErrorCard from "./components/ErrorCard";
 import { useState, useEffect } from "react";
+import {gsap} from "gsap";
 
 function App() {
 
@@ -19,10 +20,24 @@ function App() {
         setIsLoading(false);
       })
       .catch(err=>(console.log(err)))
-    
+      // gsap.set('.card',{
+      //   y:"100svh"
+      // })
   },[term])
 
-  console.log(images)
+  useEffect(() =>{
+    if (images){
+      gsap.to('.card-item',{
+        y:0,
+        duration:1,
+        ease:'power3.out',
+        stagger:{
+          each:0.1
+        } 
+      })
+    }
+  },[images])
+
 
   function loading(){
     return (<h1 className="text-3xl font-bold font-serif text-center my-20">
@@ -63,6 +78,7 @@ function App() {
       {(images.length===0 && !isLoading)?<ErrorCard/>:""}
 
     </div>
+
   );
 }
 

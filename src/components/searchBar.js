@@ -17,7 +17,7 @@ function SearchBar({onSearch}){
           placeholder='Search...'
           onChange={(event)=>{setWord(event.target.value)}}
           value={word}
-          className=" w-full rounded-full bg-white
+          className=" w-full outline-none rounded-full bg-white
           px-5 py-3  lg:rounded-lg "
           />
           <button  className="search-icon text-white rounded-full h-full
